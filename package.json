@@ -1,0 +1,8 @@
+{
+  "name": "laterman",
+  "version": "1.0.0",
+  "description": "Save things for later, man.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}
