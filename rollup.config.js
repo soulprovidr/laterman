@@ -1,3 +1,5 @@
+import builtins from 'rollup-plugin-node-builtins';
+import globals from 'rollup-plugin-node-globals';
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -11,10 +13,12 @@ export default {
   output: {
     sourcemap: true,
     format: 'iife',
-    name: 'app',
+    name: 'laterman',
     file: 'build/bundle.js',
   },
   plugins: [
+    globals(),
+    builtins(),
     svelte({
       // enable run-time checks when not in production
       dev: !production,
@@ -33,6 +37,7 @@ export default {
     resolve({
       browser: true,
       dedupe: ['svelte'],
+      preferBuiltins: true,
     }),
     commonjs(),
 

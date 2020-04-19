@@ -1,6 +1,10 @@
-<div class="splash splash--empty">
-  <img alt="cmd" class="splash__cmd" src="../assets/cmd.svg">
-  <img alt="+" class="splash__plus" src="../assets/plus.svg">
+<script>
+  export let minimized = false;
+</script>
+
+<div class="splash {minimized && 'splash--minimized'}">
+  <img alt="cmd" class="icon-cmd" src="../assets/cmd.svg">
+  <img alt="+" class="icon-plus" src="../assets/plus.svg">
   V
 </div>
 
@@ -18,30 +22,28 @@
     -webkit-user-select: none;
   }
 
-  .splash__cmd {
+  .icon-cmd {
     width: 35px;
     height: 35px;
   }
 
 
-  .splash__plus {
+  .icon-plus {
     margin: 0 18px;
     width: 10px;
   }
 
-  /* Empty styles */
-
-  .splash--empty {
+  .splash--minimized {
     height: 100vh;
     font-size: 64px;
   }
 
-  .splash--empty .splash__cmd {
+  .splash--minimized .icon-cmd {
     width: 46px;
     height: 46px;
   }
 
-  .splash--empty .splash__plus {
+  .splash--minimized .icon-plus {
     margin: 0 30px;
   }
 </style>
