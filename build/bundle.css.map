@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../App.svelte",
+    "../Splash.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import Splash from './Splash.svelte';\n  export const items = [];\n</script>\n\n<main>\n  <Splash />\n  <ul id=\"paste-item-list\">\n    \n  </ul>\n</main>\n\n<style>\n  #paste-item-list {\n    list-style-type: none;\n    margin: 0 auto;\n    padding: 0;\n    width: 900px;\n  }\n\n  @keyframes fadeIn {\n    from { opacity: 0; }\n    to { opacity: 1; }\n  }\n  .paste-item {\n    border-radius: 40px;\n    background-color: #1B4433;\n    color: white;\n    font-size: 24px;\n    padding: 40px;\n    margin-bottom: 114px;\n    animation: fadeIn 250ms ease-in-out;\n  }\n</style>",
+    "<div class=\"splash splash--empty\">\n  <img alt=\"cmd\" class=\"splash__cmd\" src=\"../assets/cmd.svg\">\n  <img alt=\"+\" class=\"splash__plus\" src=\"../assets/plus.svg\">\n  V\n</div>\n\n<style>\n  .splash {\n    height: 300px;\n    display: flex;\n    width: 100vw;\n    font-size: 48px;\n    justify-content: center;\n    align-items: center;\n    color: #FFC684;\n    user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n  }\n\n  .splash__cmd {\n    width: 35px;\n    height: 35px;\n  }\n\n\n  .splash__plus {\n    margin: 0 18px;\n    width: 10px;\n  }\n\n  /* Empty styles */\n\n  .splash--empty {\n    height: 100vh;\n    font-size: 64px;\n  }\n\n  .splash--empty .splash__cmd {\n    width: 46px;\n    height: 46px;\n  }\n\n  .splash--empty .splash__plus {\n    margin: 0 30px;\n  }\n</style>"
+  ],
+  "names": [],
+  "mappings": "AAaE,gBAAgB,eAAC,CAAC,AAChB,eAAe,CAAE,IAAI,CACrB,MAAM,CAAE,CAAC,CAAC,IAAI,CACd,OAAO,CAAE,CAAC,CACV,KAAK,CAAE,KAAK,AACd,CAAC,AAED,WAAW,qBAAO,CAAC,AACjB,IAAI,AAAC,CAAC,AAAC,OAAO,CAAE,CAAC,AAAE,CAAC,AACpB,EAAE,AAAC,CAAC,AAAC,OAAO,CAAE,CAAC,AAAE,CAAC,AACpB,CAAC;AChBD,OAAO,4BAAC,CAAC,AACP,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,KAAK,CACZ,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,OAAO,CACd,WAAW,CAAE,IAAI,CACjB,gBAAgB,CAAE,IAAI,CACtB,mBAAmB,CAAE,IAAI,AAC3B,CAAC,AAED,YAAY,4BAAC,CAAC,AACZ,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,AACd,CAAC,AAGD,aAAa,4BAAC,CAAC,AACb,MAAM,CAAE,CAAC,CAAC,IAAI,CACd,KAAK,CAAE,IAAI,AACb,CAAC,AAID,cAAc,4BAAC,CAAC,AACd,MAAM,CAAE,KAAK,CACb,SAAS,CAAE,IAAI,AACjB,CAAC,AAED,4BAAc,CAAC,YAAY,cAAC,CAAC,AAC3B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,AACd,CAAC,AAED,4BAAc,CAAC,aAAa,cAAC,CAAC,AAC5B,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC"
+}
