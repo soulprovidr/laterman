@@ -13,6 +13,19 @@
     navigator.clipboard.writeText(text);
   }
 
+  function createLinks(text) {
+    return (text || "").replace(
+      /([^\S]|^)(((https?\:\/\/)|(www\.))(\S+))/gi,
+      function(match, space, url){
+        var hyperlink = url;
+        if (!hyperlink.match('^https?:\/\/')) {
+          hyperlink = 'http://' + hyperlink;
+        }
+        return space + '<a href="' + hyperlink + '" target="_blank">' + url + '</a>';
+      }
+    );
+  };
+
   function setCopiedTimeout() {
     isCopied = true;
     setTimeout(() => {
@@ -22,7 +35,7 @@
 </script>
 
 <div transition:fade={{ duration: 200 }} class="item">
-  <p>{text}</p>
+  <p>{@html createLinks(text)}</p>
   <div class="item-footer">
     <div class="item-actions">
       <button
@@ -66,9 +79,9 @@
     box-shadow: 0px 80px 100px rgba(11, 32, 23, 0.77);
   }
 
-  a,
-  a:active,
-  a:visited {
+  :global(a),
+  :global(a:active),
+  :global(a:visited) {
     color: #FFC684;
   }
 
